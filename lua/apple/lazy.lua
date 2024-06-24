@@ -46,6 +46,9 @@ plugins = {
 	{'hrsh7th/nvim-cmp'},
 	{'L3MON4D3/LuaSnip'},
 
+    {'nvim-lua/plenary.nvim'},
+    {'ThePrimeagen/harpoon'},
+
 }
 
 require("lazy").setup(plugins)
