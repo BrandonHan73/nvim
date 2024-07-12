@@ -49,6 +49,8 @@ plugins = {
     {'nvim-lua/plenary.nvim'},
     {'ThePrimeagen/harpoon'},
 
+	{'tpope/vim-fugitive'},
+
 }
 
 require("lazy").setup(plugins)
