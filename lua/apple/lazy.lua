@@ -16,7 +16,10 @@ plugins = {
 
 	{
 		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		dependencies = { 'nvim-lua/plenary.nvim' }
+		dependencies = { 
+			'nvim-lua/plenary.nvim',
+			"BurntSushi/ripgrep",
+		}
 	},
 
 	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
@@ -55,9 +58,8 @@ plugins = {
 		"folke/which-key.nvim",
 		event = "VeryLazy",
 		opts = {
-			-- your configuration comes here
-			-- or leave it empty to use the default settings
-			-- refer to the configuration section below
+			preset = "helix",
+			sort = { "manual", "order", "group", "alphanum", "mod", "lower", "icase" },
 		},
 		keys = {
 			{
@@ -65,7 +67,7 @@ plugins = {
 				function()
 					require("which-key").show({ global = false })
 				end,
-				desc = "Buffer Local Keymaps (which-key)",
+				desc = "Show Local Keymaps",
 			},
 		},
 	}, 

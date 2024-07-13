@@ -10,3 +10,19 @@ vim.keymap.set("n", "<leader>ht", function() require("harpoon.ui").nav_file(2) e
 vim.keymap.set("n", "<leader>hn", function() require("harpoon.ui").nav_file(3) end)
 vim.keymap.set("n", "<leader>hs", function() require("harpoon.ui").nav_file(4) end)
 
+harpoon = {
+	{ "<leader>h", group = "Harpoon" },
+	{ "<leader>hm", desc = "Mark file" },
+	{ "<leader>hl", desc = "Open Harpoon UI" },
+	{
+		{ "<leader>hj", desc = "Move to next file" },
+		{ "<leader>hk", desc = "Move to previous file" },
+	},
+	{
+		{ "<leader>hh", desc = "Open File 1" },
+		{ "<leader>ht", desc = "Open File 2" },
+		{ "<leader>hn", desc = "Open File 3" },
+		{ "<leader>hs", desc = "Open File 4" },
+	},
+}
+
