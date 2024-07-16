@@ -12,67 +12,9 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-plugins = {
+require("lazy").setup({
 
-	{
-		'nvim-telescope/telescope.nvim', branch = '0.1.x',
-		dependencies = { 
-			'nvim-lua/plenary.nvim',
-			"BurntSushi/ripgrep",
-		}
-	},
+	spec = "apple.lazy",
 
-	{ "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-
-	{
-		"nvim-treesitter/nvim-treesitter",
-		build = ":TSUpdate",
-		config = function () 
-			local configs = require("nvim-treesitter.configs")
-
-			configs.setup({
-				ensure_installed = { "c", "lua", "vim", "vimdoc", "query", "elixir", "heex", "javascript", "html" },
-				sync_install = false,
-				highlight = { enable = true },
-				indent = { enable = true },  
-			})
-		end
-	},
-
-	{ "mbbill/undotree" },
-
-	{'williamboman/mason.nvim'},
-	{'williamboman/mason-lspconfig.nvim'},
-	{'VonHeikemen/lsp-zero.nvim', branch = 'v3.x'},
-	{'neovim/nvim-lspconfig'},
-	{'hrsh7th/cmp-nvim-lsp'},
-	{'hrsh7th/nvim-cmp'},
-	{'L3MON4D3/LuaSnip'},
-
-    {'nvim-lua/plenary.nvim'},
-    {'ThePrimeagen/harpoon'},
-
-	{'tpope/vim-fugitive'},
-
-	{
-		"folke/which-key.nvim",
-		event = "VeryLazy",
-		opts = {
-			preset = "helix",
-			sort = { "manual", "order", "group", "alphanum", "mod", "lower", "icase" },
-		},
-		keys = {
-			{
-				"<leader>?",
-				function()
-					require("which-key").show({ global = false })
-				end,
-				desc = "Show Local Keymaps",
-			},
-		},
-	}, 
-
-}
-
-require("lazy").setup(plugins)
+})
 
