@@ -1,5 +1,6 @@
 
 undo_tree = {
+	{ "<leader>u", group = "Undo" },
 	{ "<leader>ut", desc = "Undo Tree" },
 }
 
