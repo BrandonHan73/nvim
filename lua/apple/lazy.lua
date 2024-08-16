@@ -14,7 +14,17 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
 
-	spec = "apple.lazy",
+	spec = {
+		{ import = "apple.lazy.init" },
+		{ import = "apple.lazy.treesitter" },
+		{ import = "apple.lazy.catppuccin" },
+		{ import = "apple.lazy.telescope" },
+		{ import = "apple.lazy.which-key" },
+		{ import = "apple.lazy.fugitive" },
+		{ import = "apple.lazy.undotree" },
+		{ import = "apple.lazy.lspzero" },
+		{ import = "apple.lazy.harpoon" },
+	},
 
 })
 
