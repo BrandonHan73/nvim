@@ -20,16 +20,16 @@ return {
 
 		local wk = require("which-key")
 
-		require("apple/lazy/fugitive")
+		require("apple/plugins/fugitive")
 		wk.add(fugitive)
 
-		require("apple/lazy/telescope")
+		require("apple/plugins/telescope")
 		wk.add(telescope)
 
-		require("apple/lazy/undotree")
+		require("apple/plugins/undotree")
 		wk.add(undo_tree)
 
-		require("apple/lazy/harpoon")
+		require("apple/plugins/harpoon")
 		wk.add(harpoon)
 
 		require("apple/remap")
