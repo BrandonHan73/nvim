@@ -16,7 +16,7 @@ return {
 			-- A list of parser names, or "all" (the five listed parsers should always be installed)
 			ensure_installed = { 
 				"c", "cpp", "java", 
-				"latex", "markdown",
+				"latex", "markdown", "markdown_inline",
 				"make", "cmake",
 				"json", "python", 
 				"lua", "vim", "vimdoc", 

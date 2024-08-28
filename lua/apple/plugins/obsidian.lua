@@ -22,7 +22,7 @@ return {
 	},
 	opts = {
 		workspaces = {
-			{ name = 'Notes', path = '~/vaults/Notes' }
+			{ name = 'AppleVault', path = '~/vaults/AppleVault' }
 		}
 		-- see below for full list of options 👇
 	},
