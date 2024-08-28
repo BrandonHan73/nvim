@@ -1,18 +1,4 @@
 
-telescope = {
-	{ "<leader>f", group = "Telescope" },
-	{
-		{ "<leader>ff", desc = "Find File" },
-		{ "<leader>fg", desc = "Find Git File" },
-		{ "<leader>fb", desc = "Find Buffer" },
-	},
-	{ "<leader>fh", desc = "Help Tags" },
-	{
-		{ "<leader>fw", desc = "Grep Word" },
-		{ "<leader>fs", desc = "Live Grep" },
-	},
-}
-
 return {
 
 	'nvim-telescope/telescope.nvim', branch = '0.1.x',
@@ -25,14 +11,14 @@ return {
 
 		local builtin = require('telescope.builtin')
 
-		vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-		vim.keymap.set('n', '<leader>fg', builtin.git_files, {})
-		vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
+		vim.keymap.set('n', '<leader>tf', builtin.find_files, { desc = "Find File" })
+		vim.keymap.set('n', '<leader>tg', builtin.git_files, { desc = "Find Git File" })
+		vim.keymap.set('n', '<leader>tb', builtin.buffers, { desc = "Find Buffer" })
 
-		vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+		vim.keymap.set('n', '<leader>th', builtin.help_tags, { desc = "Help Tags" })
 
-		vim.keymap.set('n', '<leader>fw', builtin.grep_string)
-		vim.keymap.set('n', '<leader>fs', builtin.live_grep)
+		vim.keymap.set('n', '<leader>tw', builtin.grep_string, { desc = "Grep Word" })
+		vim.keymap.set('n', '<leader>ts', builtin.live_grep, { desc = "Live Grep" })
 
 	end
 

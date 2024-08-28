@@ -2,14 +2,26 @@
 return {
 
 	"nvim-treesitter/nvim-treesitter",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter-textobjects",
+	},
+
 	build = ":TSUpdate",
+
 	config = function () 
 		local configs = require("nvim-treesitter.configs")
 
 		configs.setup({
 
 			-- A list of parser names, or "all" (the five listed parsers should always be installed)
-			ensure_installed = { "c", "cpp", "java", "latex", "json", "make", "python", "lua", "vim", "vimdoc", "query" },
+			ensure_installed = { 
+				"c", "cpp", "java", 
+				"latex", "markdown",
+				"make", "cmake",
+				"json", "python", 
+				"lua", "vim", "vimdoc", 
+				"html", "css", "javascript",
+			},
 
 			-- Install parsers synchronously (only applied to `ensure_installed`)
 			sync_install = false,
@@ -34,7 +46,7 @@ return {
 			},
 		})
 
-	end
+	end,
 
 }
 

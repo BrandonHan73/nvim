@@ -6,5 +6,7 @@ return {
 		name = 'plenary',
 	},
 
+	{ 'nvim-tree/nvim-web-devicons' }
+
 }
 

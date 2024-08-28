@@ -20,20 +20,13 @@ return {
 
 		local wk = require("which-key")
 
-		require("apple/plugins/fugitive")
-		wk.add(fugitive)
-
-		require("apple/plugins/telescope")
-		wk.add(telescope)
-
-		require("apple/plugins/undotree")
-		wk.add(undo_tree)
-
-		require("apple/plugins/harpoon")
-		wk.add(harpoon)
-
-		require("apple/remap")
-		wk.add(remap)
+		wk.add({
+			{ "<leader>e", group = "Editor" },
+			{ "<leader>g", group = "Fugitive" },
+			{ "<leader>t", group = "Telescope" },
+			{ "<leader>u", group = "Undo" },
+			{ "<leader>h", group = "Harpoon" },
+		})
 
 	end
 
