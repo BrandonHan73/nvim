@@ -1,7 +1,6 @@
 
 vim.g.mapleader = " "
 
-vim.keymap.set("n", "<leader>ex", vim.cmd.Ex, { desc = "Open Explorer" })
 vim.keymap.set("n", "<leader>eq", vim.cmd.q, { desc = "Close Buffer" })
 vim.keymap.set("n", "<leader>es", vim.cmd.vs, { desc = "Split Window" })
 vim.keymap.set("n", "<leader>eh", vim.cmd.nohlsearch, { desc = "Clear Search Highlighting" })

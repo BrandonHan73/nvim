@@ -14,10 +14,10 @@ return {
 					lookahead = true,
 
 					keymaps = {
-						["a="] = { query = "@assignment.outer", desc = "assignment" },
-						["i="] = { query = "@assignment.inner", desc = "assignment" },
-						["=h"] = { query = "@assignment.lhs", desc = "left hand side" },
-						["=l"] = { query = "@assignment.rhs", desc = "right hand side" },
+						["aA"] = { query = "@assignment.outer", desc = "assignment" },
+						["iA"] = { query = "@assignment.inner", desc = "assignment" },
+						["Ah"] = { query = "@assignment.lhs", desc = "left hand side" },
+						["Al"] = { query = "@assignment.rhs", desc = "right hand side" },
 						["aa"] = { query = "@attribute.outer", desc = "attribute" },
 						["ia"] = { query = "@attribute.inner", desc = "attribute" },
 						["ak"] = { query = "@block.outer", desc = "block" },

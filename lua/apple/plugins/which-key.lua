@@ -27,6 +27,7 @@ return {
 			{ "<leader>u", group = "Undo" },
 			{ "<leader>h", group = "Harpoon" },
 			{ "<leader>s", group = "Swap" },
+			{ "<leader>p", group = "Nvim Tree" },
 		})
 
 	end

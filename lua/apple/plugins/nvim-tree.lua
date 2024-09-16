@@ -15,6 +15,9 @@ return {
 		-- empty setup using defaults
 		require("nvim-tree").setup()
 
+		vim.keymap.set("n", "<leader>pt", vim.cmd.NvimTreeFocus, { desc = "Open Nvim tree" })
+		vim.keymap.set("n", "<leader>pc", vim.cmd.NvimTreeClose, { desc = "Close Nvim tree" })
+
 	end,
 
 }
