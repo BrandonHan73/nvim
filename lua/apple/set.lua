@@ -1,6 +1,9 @@
 
 vim.cmd.colorscheme("catppuccin")
 
+vim.opt.mouse = ""
+vim.opt.mousehide = true
+
 vim.opt.nu = true
 vim.opt.relativenumber = true
 
